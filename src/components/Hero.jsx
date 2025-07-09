@@ -2,8 +2,13 @@ import React from "react"
 import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap"
 import { SplitText } from "gsap/all"
+import { useMediaQuery } from "react-responsive"
 
 const Hero = () => {
+  const videoRef = React.useRef() // useRef is used to create a reference to the video element so we can control it
+
+  const isMobile = useMediaQuery({ maxWidth: 767 }) // useMediaQuery is a hook that checks if the screen width is less than or equal to 767px (mobile devices)
+
   useGSAP(() => {
     // new SplitText() is a GSAP utility that splits text into characters or words for animation
     const heroSplit = new SplitText(".title", { type: "chars, words" })
@@ -39,8 +44,33 @@ const Hero = () => {
           scrub: true, // smooth scrubbing effect
         },
       })
-      .to("#hero .right-leaf", { y: 200 }, 0) // animate the right leaf down by 200 pixels
-      .to("#hero .left-leaf", { y: -200 }, 0) // animate the left leaf up by 200 pixels
+      // animate the right leaf down by 200 pixels
+      .to("#hero .right-leaf", { y: 200 }, 0)
+      // animate the left leaf up by 200 pixels
+      .to("#hero .left-leaf", { y: -200 }, 0)
+
+    // if the screen is not mobile, play the video
+    // start the video animation when the top of the hero section hits 50% of the viewport height on mobile, or center 60% on larger screens
+    // end the video animation when the hero section is 120% of the viewport height on mobile, or when the bottom of the hero section hits the top of the viewport on larger screens
+    const startValue = isMobile ? "top 50%" : "center 60%"
+    const endValue = isMobile ? "120% top" : "bottom top"
+
+    //  Video animation timeline
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "video",
+        start: startValue,
+        end: endValue,
+        scrub: true,
+        pin: true, // pin the video in place during the scroll
+      },
+    })
+
+    videoRef.current.onloadedmetadata = () => {
+      tl.to(videoRef.current, {
+        currentTime: videoRef.current.duration, // play the video from start to end
+      })
+    }
   }, [])
   // [] empty array means that the effect will only run once when the component mounts
   return (
@@ -76,6 +106,16 @@ const Hero = () => {
           </div>
         </div>
       </section>
+      <div className="video absolute inset-0">
+        {/* playsInline makes the video non-interactive */}
+        <video
+          ref={videoRef}
+          src="/videos/output.mp4"
+          muted
+          playsInline
+          preload="auto"
+        />
+      </div>
     </>
   )
 }
