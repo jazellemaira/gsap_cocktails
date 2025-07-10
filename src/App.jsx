@@ -7,6 +7,7 @@ import Cocktails from "./components/Cocktails"
 import About from "./components/About"
 import Art from "./components/Art"
 import Menu from "./components/Menu"
+import Contact from "./components/Contact"
 
 // Registering GSAP plugins for animations, split-text, and scroll-triggered effects for them to be used globally in the app
 gsap.registerPlugin(ScrollTrigger, SplitText)
@@ -20,6 +21,7 @@ const App = () => {
       <About />
       <Art />
       <Menu />
+      <Contact />
     </main>
   )
 }
