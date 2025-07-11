@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { allCocktails } from "../../constants"
+import { allCocktails } from "../constants/index.js"
 import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap"
 import LeftArrow from "../assets/images/left-arrow.png"

@@ -1,4 +1,13 @@
+import Insta from "../assets/images/insta.png"
+import X from "../assets/images/x.png"
+import Fb from "../assets/images/fb.png"
+
+import Drink1 from "../assets/images/drink1.png"
+import Drink2 from "../assets/images/drink2.png"
+import Drink3 from "../assets/images/drink3.png"
+import Drink4 from "../assets/images/drink4.png"
 // create different arrays [] that has different objects within it each of the object have different properties and values e.g title, id, and link that you can use to render in the app
+
 const navLinks = [
   {
     id: "cocktails",
@@ -72,21 +81,6 @@ const mockTailLists = [
   },
 ]
 
-const profileLists = [
-  {
-    imgPath: "src/assets/images/profile1.png",
-  },
-  {
-    imgPath: "src/assets/images/profile2.png",
-  },
-  {
-    imgPath: "src/assets/images/profile3.png",
-  },
-  {
-    imgPath: "src/assets/images/profile4.png",
-  },
-]
-
 const featureLists = [
   "Perfectly balanced blends",
   "Garnished to perfection",
@@ -120,17 +114,17 @@ const openingHours = [
 const socials = [
   {
     name: "Instagram",
-    icon: "src/assets/images/insta.png",
+    icon: Insta,
     url: "#",
   },
   {
     name: "X (Twitter)",
-    icon: "src/assets/images/x.png",
+    icon: X,
     url: "#",
   },
   {
     name: "Facebook",
-    icon: "src/assets/images/fb.png",
+    icon: Fb,
     url: "#",
   },
 ]
@@ -139,7 +133,7 @@ const allCocktails = [
   {
     id: 1,
     name: "Classic Mojito",
-    image: "src/assets/images/drink1.png",
+    image: Drink1,
     title: "Simple Ingredients, Bold Flavor",
     description:
       "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
@@ -147,7 +141,7 @@ const allCocktails = [
   {
     id: 2,
     name: "Raspberry Mojito",
-    image: "src/assets/images/drink2.png",
+    image: Drink2,
     title: "A Zesty Classic That Never Fails",
     description:
       "The Margarita is a classic that balances tangy lime, smooth tequila, and a touch of sweetness. Shaken, frozen, or on the rocks—it’s always crisp & refreshing.",
@@ -155,7 +149,7 @@ const allCocktails = [
   {
     id: 3,
     name: "Violet Breeze",
-    image: "src/assets/images/drink3.png",
+    image: Drink3,
     title: "Simple Ingredients, Bold Flavor",
     description:
       "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
@@ -163,7 +157,7 @@ const allCocktails = [
   {
     id: 4,
     name: "Curacao Mojito",
-    image: "src/assets/images/drink4.png",
+    image: Drink4,
     title: "Crafted With Care, Poured With Love",
     description:
       "Each cocktail is made with fresh ingredients and a passion for perfecting every pour, whether you're celebrating or simply relaxing.",
@@ -174,7 +168,6 @@ export {
   navLinks,
   cocktailLists,
   mockTailLists,
-  profileLists,
   featureLists,
   goodLists,
   openingHours,
