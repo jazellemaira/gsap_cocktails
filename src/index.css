@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Modern Negra";
-  src: url("src/assets/fonts/Modern Negra Demo.ttf") format("truetype");
+  src: url("./assets/fonts/Modern Negra Demo.ttf") format("truetype");
 }
 
 @theme {
@@ -54,7 +54,7 @@ body {
 }
 
 @utility masked-img {
-  mask-image: url("src/assets/images/mask-img.png");
+  mask-image: url("./assets/images/mask-img.png");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 50%;
@@ -86,7 +86,7 @@ body {
   }
 
   .noisy {
-    @apply absolute inset-0 size-full bg-[url("src/assets/images/noise.png")];
+    @apply absolute inset-0 size-full bg-[url("./assets/images/noise.png")];
   }
 
   #hero {
