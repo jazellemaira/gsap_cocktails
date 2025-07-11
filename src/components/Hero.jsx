@@ -3,6 +3,9 @@ import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap"
 import { SplitText } from "gsap/all"
 import { useMediaQuery } from "react-responsive"
+import HeroRightLeaf from "../assets/images/hero-right-leaf.png"
+import HeroLeftLeaf from "../assets/images/hero-left-leaf.png"
+import CocktailVideo from "../assets/videos/output.mp4"
 
 const Hero = () => {
   const videoRef = React.useRef() // useRef is used to create a reference to the video element so we can control it
@@ -77,16 +80,8 @@ const Hero = () => {
     <>
       <section id="hero" className="noisy">
         <h1 className="title">NEGRONI</h1>
-        <img
-          src="images/hero-left-leaf.png"
-          alt="left-leaf"
-          className="left-leaf"
-        />
-        <img
-          src="images/hero-right-leaf.png"
-          alt="right-leaf"
-          className="right-leaf"
-        />
+        <img src={HeroLeftLeaf} alt="left-leaf" className="left-leaf" />
+        <img src={HeroRightLeaf} alt="right-leaf" className="right-leaf" />
         <div className="body">
           <div className="content">
             <div className="space-y-5 hidden md:block">
@@ -110,7 +105,7 @@ const Hero = () => {
         {/* playsInline makes the video non-interactive */}
         <video
           ref={videoRef}
-          src="/videos/output.mp4"
+          src={CocktailVideo}
           muted
           playsInline
           preload="auto"

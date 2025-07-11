@@ -2,6 +2,8 @@ import React from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { cocktailLists, mockTailLists } from "../../constants"
+import CocktailLeftLeaf from "../assets/images/cocktail-left-leaf.png"
+import CocktailRightLeaf from "../assets/images/cocktail-right-leaf.png"
 
 const Cocktails = () => {
   useGSAP(() => {
@@ -28,16 +30,8 @@ const Cocktails = () => {
 
   return (
     <section id="cocktails" className="noisy">
-      <img
-        src="images/cocktail-left-leaf.png"
-        alt="left-leaf"
-        id="c-left-leaf"
-      />
-      <img
-        src="images/cocktail-right-leaf.png"
-        alt="right-leaf"
-        id="c-right-leaf"
-      />
+      <img src={CocktailLeftLeaf} alt="left-leaf" id="c-left-leaf" />
+      <img src={CocktailRightLeaf} alt="right-leaf" id="c-right-leaf" />
       <div className="list">
         <div className="popular">
           <h2>Most Popular Cocktails:</h2>
