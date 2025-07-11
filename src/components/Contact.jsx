@@ -58,7 +58,7 @@ const Contact = () => {
         <div>
           <h3>Contact Us</h3>
           <p>+31 71 123 4567</p>
-          <p>info@negronicocktails.nl</p>
+          <p>info@wijnenwens.nl</p>
         </div>
         <div>
           <h3>Open Every Day</h3>
