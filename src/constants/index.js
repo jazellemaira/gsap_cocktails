@@ -18,7 +18,7 @@ const navLinks = [
     title: "About Us",
   },
   {
-    id: "work",
+    id: "art",
     title: "The Art",
   },
   {
