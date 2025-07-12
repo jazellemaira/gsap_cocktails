@@ -10,6 +10,7 @@
 @theme {
   --color-yellow: #e7d393;
   --color-white-100: #efefef;
+  --color-amber-100: #d88f73;
   --font-sans: "Mona Sans", sans-serif;
   --font-modern-negra: "Modern Negra", sans-serif;
   --font-serif: "DM Serif Text", serif;
@@ -73,11 +74,11 @@ body {
     }
 
     p {
-      @apply font-modern-negra text-3xl -mb-2;
+      @apply font-modern-negra text-3xl text-amber-100 -mb-2;
     }
 
     a {
-      @apply cursor-pointer text-nowrap md:text-base text-sm;
+      @apply cursor-pointer text-nowrap md:text-base text-sm hover:text-amber-100 active:text-amber-100 transition-colors;
     }
 
     ul {
