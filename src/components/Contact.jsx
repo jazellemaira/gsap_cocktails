@@ -5,6 +5,7 @@ import gsap from "gsap"
 import { SplitText } from "gsap/all"
 import FooterLeftLeaf from "../assets/images/footer-left-leaf.png"
 import FooterRightLeaf from "../assets/images/footer-right-leaf.png"
+import DrinkAssortment from "../assets/images/assortment-cocktails.png"
 
 const Contact = () => {
   useGSAP(() => {
@@ -85,6 +86,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <img src={DrinkAssortment} alt="drink-assortment" className="drink-img" />
     </footer>
   )
 }
