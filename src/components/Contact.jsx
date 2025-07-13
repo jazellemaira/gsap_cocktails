@@ -5,6 +5,7 @@ import gsap from "gsap"
 import { SplitText } from "gsap/all"
 import FooterLeftLeaf from "../assets/images/footer-left-leaf.png"
 import FooterRightLeaf from "../assets/images/footer-right-leaf.png"
+import DrinkAssortment from "../assets/images/assortment-cocktails.png"
 
 const Contact = () => {
   useGSAP(() => {
@@ -37,7 +38,8 @@ const Contact = () => {
       .to(
         "#f-left-leaf",
         {
-          y: -50,
+          y: 100,
+          x: -50,
           duration: 1,
           ease: "power1.inOut",
         },
@@ -85,6 +87,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <img src={DrinkAssortment} alt="drink-assortment" className="drink-img" />
     </footer>
   )
 }
