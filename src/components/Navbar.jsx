@@ -30,7 +30,7 @@ const Navbar = () => {
       <div>
         <a href="#home" className="flex items-center gap-2">
           <img src={Logo} alt="logo" />
-          <p>Wijn &times; Wens</p>
+          <p className="brightness-125">Wijn &times; Wens</p>
         </a>
         <ul>
           {/* open a new dynamic block of code {} that contains the index.js object*/}

@@ -113,14 +113,18 @@ const Menu = () => {
             className="text-left"
             onClick={() => goToSlide(currentIndex - 1)}
           >
-            <span>{prevCocktail.name}</span>
+            <span className="hover:text-amber-100 hover:brightness-125">
+              {prevCocktail.name}
+            </span>
             <img src={RightArrow} alt="right-arrow" aria-hidden="true" />
           </button>
           <button
             className="text-left"
             onClick={() => goToSlide(currentIndex + 1)}
           >
-            <span>{nextCocktail.name}</span>
+            <span className="hover:text-amber-100 hover:brightness-125">
+              {nextCocktail.name}
+            </span>
             <img src={LeftArrow} alt="left-arrow" aria-hidden="true" />
           </button>
         </div>
