@@ -44,7 +44,7 @@ const Art = () => {
   return (
     <div id="art">
       <div className="container mx-auto h-full pt-20">
-        <h2 className="will-fade">The Art</h2>
+        <h2 className="will-fade text-amber-100 saturate-60">The Art</h2>
         <div className="content">
           <ul className="space-y-4 will-fade">
             {goodLists.map((feature, index) => (
@@ -71,12 +71,15 @@ const Art = () => {
           </ul>
         </div>
         <div className="masked-container">
-          <h2 className="will-fade">Sip-Worthy Perfection</h2>
+          <h2 className="will-fade text-gradient">Sip-Worthy Perfection</h2>
           <div id="masked-content">
             <h3>Made with Craft, Poured with Passion</h3>
-            <p>
-              This isn’t just a drink. It’s a carefully crafted moment made just
-              for you.
+            <p className="text-shadow-amber-100 text-shadow-xs">
+              This isn’t just a drink. It’s a carefully crafted moment made{" "}
+              <span className="text-amber-100 brightness-125 text-shadow-none">
+                just for you
+              </span>
+              .
             </p>
           </div>
         </div>

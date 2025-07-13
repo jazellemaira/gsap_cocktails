@@ -50,7 +50,7 @@ const Contact = () => {
       <img src={FooterRightLeaf} alt="right-leaf" id="f-right-leaf" />
       <img src={FooterLeftLeaf} alt="left-leaf" id="f-left-leaf" />
       <div className="content">
-        <h2>Where to Find Us</h2>
+        <h2 className="text-amber-100 brightness-125">Where to Find Us</h2>
         <div>
           <h3>Visit Our Bar</h3>
           <p>Polderstraat 123, 1234 AB Leiden, Netherlands</p>
