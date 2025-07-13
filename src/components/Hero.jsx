@@ -83,7 +83,7 @@ const Hero = () => {
         <img src={HeroLeftLeaf} alt="left-leaf" className="left-leaf" />
         <img src={HeroRightLeaf} alt="right-leaf" className="right-leaf" />
         <div className="body">
-          <div className="content">
+          <div className="content bg-black/40 lg:bg-transparent rounded-lg p-8 md:p-16">
             <div className="space-y-5 hidden md:block">
               <p>Cool. Crisp. Classic</p>
               <p className="subtitle">
